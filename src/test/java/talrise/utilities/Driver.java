@@ -36,7 +36,9 @@ public class Driver {
 //                driver = new ChromeDriver();
                 break;
             case "chrome-headless":
-                driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+                options = new ChromeOptions();
+                options.addArguments("--headless");
+                driver = new ChromeDriver(options);
                 break;
             case "firefox":
                 driver = new FirefoxDriver();
