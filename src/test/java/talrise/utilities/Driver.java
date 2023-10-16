@@ -1,6 +1,7 @@
 package talrise.utilities;
 
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,6 +29,7 @@ public class Driver {
         String browser = ConfigurationReader.get("browser");
         switch (browser) {
             case "chrome":
+                WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*");
                 driver = new ChromeDriver(options);
