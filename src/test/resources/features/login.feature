@@ -12,7 +12,7 @@ Feature: Login Feature
   Scenario Outline: Login with invalid Credentials
     Given the user enters invalid "<Email>","<Password>"
     When the user clicks on login button
-    Then the user should see "Username or password not correct" message
+    Then the user should see "Username or password not corrects" message
 
     Examples:
       | Email                   | Password     |
